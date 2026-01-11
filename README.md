@@ -1,14 +1,22 @@
-# llm-litreviewer
+# LLM Article Filter 
 
-LLM Reviewer supports the following filtering types:
+## Paper
+This repository contains the code and supporting data for the paper 
+"Leveraging Large Language Model Token Probabilities for Literature Review Abstract Filtering".  
+
+Sample abstracts used in the paper are located in the "Data/QWEN" subdirectory.  Scripts used for analysis and figure creation in the paper are located in the "article_scripts" subdirectory.  The python package itself is located in the articlefilter subdirectory.  Dependencies are located in the poetry.toml file.  Note that newer versions of llama-cpp-python will generate an error when calculating embeddings in batch mode. 
+
+
+## Overview
+The LLM Article Filter package supports the following filtering types:
 - Pure Prompt
 - Binary Probability
 - Structured Probability
 ### Interfaces
-LLM Reviewer can be used directly via the python library or through the CLI
+LLM article filter can be used directly via the python library or through the CLI
 
 ## Inputs
-LLM Reviewer requires a csv with a column containing abstracts.
+LLM Article Filter requires a csv with a column containing abstracts.
 - A CSV with a column containing abstracts
 - System and/or user prompts.  This must contain {abstract}, where the abstract will be inserted.\*
 - Configuration file (or individually set model parameters)
