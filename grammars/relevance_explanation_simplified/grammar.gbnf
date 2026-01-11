@@ -1,0 +1,6 @@
+root ::= AbstractInfo
+
+AbstractInfo ::= "{" ws "\"relevance\":" ws boolean "," ws "\"explanation\":" ws string ws "}"
+string ::= "\"" ([^"]*) "\""
+boolean ::= "1" | "0"
+ws ::= [ \t\n]*

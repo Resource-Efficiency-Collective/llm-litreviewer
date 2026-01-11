@@ -1,0 +1,8 @@
+root ::= AbstractInfo
+AbstractInfo ::= "{" "\"relevant\":" boolean "," "\"mitigationmeasures\":" stringlist "}"
+AbstractInfolist ::= "[]" | "[" AbstractInfo ("," AbstractInfo)* "]"
+string ::= "\"" ([^"]*) "\""  # Allows spaces inside strings
+boolean ::= "true" | "false"  # No leading spaces allowed
+number ::= [0-9]+ "."? [0-9]*
+stringlist ::= "[]" | "[" string ("," string)* "]"
+numberlist ::= "[]" | "[" number ("," number)* "]"

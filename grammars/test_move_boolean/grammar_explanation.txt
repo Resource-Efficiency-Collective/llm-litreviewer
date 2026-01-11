@@ -1,0 +1,1 @@
+Generate a structured JSON object following this schema: { "relevance": boolean, "explanation": string }. Ensure boolean values are either 0 or 1, the decision should be explained concisely.

@@ -1,0 +1,29 @@
+[tool.poetry]
+name = "articlefilter"
+version = "0.1.0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+openai = "^1.61.1"
+pandas = "^2.3.3"
+llama-cpp-python = "0.3.12"
+matplotlib = "^3.10.8"
+seaborn = "^0.13.2"
+pyyaml = "^6.0.3"
+scikit-learn = "^1.8.0"
+google-generativeai = "^0.8.5"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.2"   # <-- Add pytest here!
+pytest-cov = "^5.0" # Optional: Add this if you want coverage reports
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+articlefilter = "articlefilter.cli:main"

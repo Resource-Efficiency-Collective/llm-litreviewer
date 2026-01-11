@@ -1,0 +1,1 @@
+Generate a structured JSON object following this schema: { "relevant": boolean, "mitigationmeasures": string[], "explanation": string }. Ensure boolean values are either 0 or 1, the mitigation measures list is properly formatted, and a brief (1-2 sentences) explanation is provided for the relevance decision.

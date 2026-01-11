@@ -1,0 +1,5 @@
+,Convention,Source,Max_F1,Best_Threshold
+1,R_1_IR_0_OR_relevant_first_T_0_MODEL_llama,polar bears,0.65625,0.05
+0,R_1_IR_0_OR_relevant_first_T_0_MODEL_llama,financial markets,0.676923076923077,0.1
+2,R_1_IR_0_OR_relevant_first_T_0_MODEL_llama,rabbits,0.7096774193548387,0.05
+3,R_1_IR_0_OR_relevant_first_T_0_MODEL_llama,cows,0.7906976744186046,0.09

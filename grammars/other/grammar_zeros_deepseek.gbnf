@@ -1,0 +1,11 @@
+root ::= think-block response
+
+think-block ::= "<think>" ws* thinking-content ws* "</think>" ws*
+
+thinking-content ::= ([^<]+ | "<" [^/])*
+
+response ::= text-content
+
+text-content ::= ([^<]+ | "<" [^/])*
+
+ws ::= [ \t\n\r]

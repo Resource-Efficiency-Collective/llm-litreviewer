@@ -1,0 +1,41 @@
+model:
+  name: "nomic-embed-text"
+  version: null  # or you can just omit this line if you prefer
+  # provider: "ollama"
+  provider: "llama_cpp"
+  # llama_cpp_settings:
+  #   verbose: False
+  #   n_threads: 4
+  #   simple: True
+
+
+# evalulation:
+#   max_tokens: 1
+#   top_p: 1
+#   temperature: 0
+#   presence_penalty: 0
+#   frequency_penalty: 0
+#   repeat_penalty: 1
+
+
+abstracts:
+  input_file: "../tests/data/cows.csv"
+
+# prompts:
+#   # system_prompt_path: "./system_messages/prompt.txt"
+#   user_prompt_path: "./user_messages/probs_input_3.txt" 
+
+output:
+  output_dir: "./output"
+  run_name: "llm_metareview"
+  keep_columns:
+    - "Authors"
+    - "Article Title"
+    - "UT (Unique WOS ID)"
+  relevance_label_col_name: 'Label'
+  # other_cols:
+  #   - "Explanation"
+
+# Optional:
+log_stats: false  # change to true if you want logging
+
