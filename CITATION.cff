@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite it as below."
+authors:
+  - family-names: Mitchell
+    given-names: Philip
+    email: pmm73@cam.ac.uk
+    affiliation: Department of Engineering, University of Cambridge, United Kingdom
+  - family-names: Andrieu
+    given-names: Baptiste
+    affiliation: Department of Engineering, University of Cambridge, United Kingdom
+  - family-names: Heydari
+    given-names: Mehrnoosh
+    affiliation: Department of Engineering, University of Cambridge, United Kingdom
+  - family-names: Cullen
+    given-names: Jonathan
+    affiliation: Department of Engineering, University of Cambridge, United Kingdom
+  - family-names: Cabrera Serrenho
+    given-names: André
+    affiliation: Department of Engineering, University of Cambridge, United Kingdom
+
+title: "Leveraging Large Language Model Token Probabilities for Literature Review Abstract Filtering"
+type: software
+version: 0.1-alpha
+doi: 10.5281/zenodo.18223436 
+date-released: 2026-13-01
+url: "https://github.com/Resource-Efficiency-Collective/llm-litreviewer"
