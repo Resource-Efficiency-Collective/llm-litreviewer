@@ -22,5 +22,5 @@ title: "Leveraging Large Language Model Token Probabilities for Literature Revie
 type: software
 version: 0.1-alpha
 doi: 10.5281/zenodo.18223436 
-date-released: 2026-01-13
+date-released: 2026-01-29
 url: "https://github.com/Resource-Efficiency-Collective/llm-litreviewer"
