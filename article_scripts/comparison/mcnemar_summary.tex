@@ -1,0 +1,30 @@
+\begin{tabular}{lcccccc}
+\toprule
+Model & Emb correct / Gen wrong & Emb wrong / Gen correct & McNemar p-value & Winner \\
+\midrule
+R0-IR1-RF-llama3.2 & 125 & 17 & 1.67e-21 & embedding \\
+R0-IR1-IF-llama3.2 & 126 & 18 & 3.81e-21 & embedding \\
+R2-IR9-RF-llama3.2 & 4 & 18 & 0.0043 & generative \\
+R3-IR2-RF-llama3.2 & 3 & 16 & 0.0044 & generative \\
+R6-IR3-RF-llama3.2 & 5 & 19 & 0.0066 & generative \\
+R3-IR6-RF-llama3.2 & 4 & 17 & 0.0072 & generative \\
+R3-IR5-RF-llama3.2 & 5 & 17 & 0.0169 & generative \\
+R5-IR3-RF-llama3.2 & 5 & 17 & 0.0169 & generative \\
+R0-IR1-IF-qwen2.5 & 7 & 20 & 0.0192 & generative \\
+R9-IR2-RF-llama3.2 & 8 & 20 & 0.0357 & generative \\
+R2-IR9-RF-qwen2.5 & 6 & 15 & 0.0784 & generative \\
+R1-IR0-RF-qwen2.5 & 7 & 16 & 0.0931 & generative \\
+R2-IR3-RF-llama3.2 & 9 & 18 & 0.1221 & generative \\
+R1-IR0-IF-qwen2.5 & 11 & 19 & 0.2005 & generative \\
+R3-IR5-RF-qwen2.5 & 9 & 14 & 0.4049 & generative \\
+R6-IR3-RF-qwen2.5 & 9 & 13 & 0.5235 & generative \\
+R0-IR1-RF-qwen2.5 & 12 & 16 & 0.5716 & generative \\
+R1-IR0-IF-llama3.2 & 16 & 12 & 0.5716 & embedding \\
+R5-IR3-RF-qwen2.5 & 14 & 11 & 0.6900 & embedding \\
+R3-IR2-RF-qwen2.5 & 14 & 11 & 0.6900 & embedding \\
+R3-IR6-RF-qwen2.5 & 10 & 12 & 0.8318 & generative \\
+R9-IR2-RF-qwen2.5 & 13 & 11 & 0.8388 & embedding \\
+R1-IR0-RF-llama3.2 & 18 & 16 & 0.8642 & embedding \\
+R2-IR3-RF-qwen2.5 & 18 & 20 & 0.8714 & generative \\
+\bottomrule
+\end{tabular}

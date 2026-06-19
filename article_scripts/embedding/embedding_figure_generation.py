@@ -24,7 +24,7 @@ llm_processor.load_model(
 
 # -------------------------------------------------------------------- #
 # Results from running embedding
-df = pd.read_csv('./output/with_embedding.csv')
+df = pd.read_csv('./output/with_embedding_2.csv')
 
 
 queries = ["rabbits", "cows", "polar bears", "financial markets"]
@@ -94,8 +94,8 @@ for i, metric in enumerate(metrics):
     if i == 1:
         ax.legend(loc="lower left")
 
-plt.tight_layout()
-figure_name = "f1_per_recall_embeddings"
-plt.savefig(f"{figure_name}.png", dpi=300, bbox_inches="tight")
-plt.savefig(f"{figure_name}.eps")
+# plt.tight_layout()
+# figure_name = "f1_per_recall_embeddings"
+# plt.savefig(f"{figure_name}.png", dpi=300, bbox_inches="tight")
+# plt.savefig(f"{figure_name}.eps")
 plt.show()

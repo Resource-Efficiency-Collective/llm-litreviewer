@@ -90,11 +90,11 @@ grouped = pd.read_csv('../../data/WOS/WOS_combined.csv',index_col=0)
 # -------------------------------------------------------------------- #
 # Load Model
 name = "all_abstracts"
-model_name = "llama3.2"
-model_version = None
+# model_name = "llama3.2"
+# model_version = None
 
-# model_name = "qwen2.5"
-# model_version = "3b"
+model_name = "qwen2.5"
+model_version = "3b"
 
 model_provider = "llama_cpp"
 # input_file = "../tests/data/all_abstracts.csv"
@@ -114,21 +114,24 @@ run_name = "all_test"
 combinations = []
 # relevant_token, irrelevant_token, order, temperature,
 # Done
+# combinations.append([1, 0, "relevant_first", 0])
+# combinations.append([1, 0, "relevant_first", 0])
+# combinations.append([1, 0, "relevant_first", 0])
 combinations.append([1, 0, "relevant_first", 0])
-# combinations.append([1, 0, "irrelevant_first", 0])
-# combinations.append([0, 1, "irrelevant_first", 0])
-# combinations.append([0, 1, "relevant_first", 0])
-# combinations.append([3, 5, "relevant_first", 0])
-# combinations.append([5, 3, "relevant_first", 0])
+combinations.append([1, 0, "irrelevant_first", 0])
+combinations.append([0, 1, "irrelevant_first", 0])
+combinations.append([0, 1, "relevant_first", 0])
+combinations.append([3, 5, "relevant_first", 0])
+combinations.append([5, 3, "relevant_first", 0])
 #
-# combinations.append([6, 3, "relevant_first", 0])
-# combinations.append([3, 6, "relevant_first", 0])
-
-# combinations.append([9, 2, "relevant_first", 0])
-# combinations.append([2, 9, "relevant_first", 0])
+combinations.append([6, 3, "relevant_first", 0])
+combinations.append([3, 6, "relevant_first", 0])
 #
-# combinations.append([2, 3, "relevant_first", 0])
-# combinations.append([3, 2, "relevant_first", 0])
+combinations.append([9, 2, "relevant_first", 0])
+combinations.append([2, 9, "relevant_first", 0])
+# #
+combinations.append([2, 3, "relevant_first", 0])
+combinations.append([3, 2, "relevant_first", 0])
 
 # Todo
 # combinations.append([1, 0, "irrelevant_first", 0])
@@ -163,6 +166,7 @@ llm_processor.load_abstracts(df=grouped)
 
 
 all_results = []
+i=0
 for combination in combinations:
     print("Processing Combination")
     relevant_token = combination[0]
@@ -221,7 +225,8 @@ for combination in combinations:
             # **other_params,
         )
         returned_structure.to_csv(
-            f"./output/{topic}_R_{relevant_token}_IR_{irrelevant_token}_OR_{order}_T_{temp}_MODEL_llama.csv"
+            f"./output/WOS/{topic}_R_{relevant_token}_IR_{irrelevant_token}_OR_{order}_T_{temp}_MODEL_qwen.csv"
         )
         results[topic] = returned_structure
+        i+=1
     all_results.append(results)

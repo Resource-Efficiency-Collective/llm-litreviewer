@@ -8,9 +8,9 @@ llm_processor = af.LLMProcessor_Pure()
 model_name = "nomic-embed-text"
 model_version = None
 model_provider = "llama_cpp"
-name = "rabbits"
+name = ""
 
-keep_columns = ["Article Title", "UT (Unique WOS ID)", "Abstract", "source"]
+keep_columns = ["Article Title", "UT (Unique WOS ID)", "Abstract","Label_Human"]
 output_dir = "./output"
 run_name = f"{name}"
 
@@ -30,8 +30,12 @@ llm_processor.prepare_output_files(
     relevance_label_col_name="relevance",
 )
 
-input_WOS_abstracts = '../../data/WOS/WOS_combined.csv'
-llm_processor.load_abstracts(input_file=input_WOS_abstracts)
+# input_WOS_abstracts = '../../data/WOS/WOS_combined.csv'
+input_WOS_abstracts = '../../data/WOS/Lithium/lithium_combined.xlsx'
+df = pd.read_excel(input_WOS_abstracts)
+
+llm_processor.load_abstracts(df=df)
 
 df = llm_processor.runEmbedding(write_csv=False)
-df.to_csv("./output/with_embedding_2.csv")
+df.to_csv("./output/with_embedding_li.csv")
+
